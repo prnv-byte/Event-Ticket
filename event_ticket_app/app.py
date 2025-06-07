@@ -7,7 +7,7 @@ import io
 app = Flask(__name__)
 
 DB_FILE = "users.json"
-TEMPLATE_IMAGE = "static/Event Ticket.jpeg"
+TEMPLATE_IMAGE = "static/Event_Ticket.jpeg"
 
 def load_users():
     if not os.path.exists(DB_FILE):
@@ -50,9 +50,12 @@ def ticket(username):
     name = username.capitalize()
 
     # Load the base image
-    print("File exists:", os.path.exists("static/Event Ticket.jpeg"))
+    
+    print("✅ Looking for:", TEMPLATE_IMAGE)
+    print("✅ Found:", os.path.exists(TEMPLATE_IMAGE))
 
-    image = Image.open("static/Event Ticket.jpeg")
+
+    image = Image.open(TEMPLATE_IMAGE)
     draw = ImageDraw.Draw(image)
 
     # Load font (you can use another if Arial is not available)
