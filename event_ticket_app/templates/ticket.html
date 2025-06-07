@@ -1,0 +1,43 @@
+<!-- templates/ticket.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Event Ticket</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+      background-color: #f3f3f3;
+    }
+    img {
+      max-width: 100%;
+      border: 4px solid #8B2C39;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #8B2C39;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background-color: #73202F;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎫 Your Personalized Event Ticket</h1>
+  <img id="ticketImage" src="{{ ticket_url }}" alt="Your Ticket">
+  <br>
+  <a class="btn" href="{{ ticket_url }}" download="ticket.png">Download Ticket</a>
+</body>
+</html>

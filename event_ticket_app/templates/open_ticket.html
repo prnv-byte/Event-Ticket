@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+        // Automatically open ticket in new tab and go back to home
+        window.onload = function () {
+            const name = "{{ username }}";
+            const ticketUrl = "/ticket/" + name;
+            window.open(ticketUrl, "_blank");
+        //    window.location.href = "/"; // optional: redirect main tab to home
+        };
+    </script>
+</head>
+<body>
+    <p>Generating your ticket...</p>
+</body>
+</html>

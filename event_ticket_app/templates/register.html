@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="card">
+    <h2>🌱 Join the Event</h2>
+    <form method="POST">
+      <label for="name">Enter Your Name</label>
+      <input type="text" id="name" name="name" placeholder="e.g. Kiki" required>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>

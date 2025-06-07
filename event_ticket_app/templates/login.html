@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="card">
+    <h2>🎫 Find Your Ticket</h2>
+    <form method="POST">
+      <label for="name">Enter Your Name</label>
+      <input type="text" id="name" name="name" placeholder="e.g. Chihiro" required>
+      <button type="submit">Login</button>
+    </form>
+
+    {% if error %}
+      <div class="error">{{ error }}</div>
+      <br />
+      <form action="{{ url_for('register') }}">
+        <button type="submit">Register Instead</button>
+      </form>
+    {% endif %}
+  </div>
+</body>
+</html>
